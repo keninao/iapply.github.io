@@ -1,0 +1,41 @@
+.calendar{
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+}
+
+.modify_event{
+    margin: 2rem;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.modify_event .button{
+    background-color: #B80000; /* Green */
+    border: .5px solid rgb(128, 0, 0);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 150px;
+    transition-duration: 0.4s; /* Add transition effect */
+    cursor: pointer; /* Change cursor on hover */
+    display: block;
+}
+
+.modify_event button:hover {
+    background-color: #8e3e3e; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+@media screen and (max-width:1024px){
+    .calendar{
+        grid-template-columns: none;
+    }
+
+    .modify_event{
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

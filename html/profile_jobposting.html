@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>University of the East OJAM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../css/modal.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'/>
+        <link href="../css/applicant.css" rel="stylesheet" />
+
+    </head>
+    <body>
+            <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <img src="../images/uelogo.png" alt="uelogo">
+                        <h2>OJAM<span class="danger">&nbsp;Applicant</h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <a href="../html/profile.html">
+                        <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="../html/profile_requirements.html">
+                        <span class="material-symbols-outlined">file_open</span>
+                        <h3>Requirements</h3>
+                    </a>
+                    <a href="../html/profile_calendar.html">
+                        <span class="material-icons-sharp">event</span>
+                        <h3>Calendar</h3>
+                    </a>
+                    <a href="../html/profile_referral.html">
+                        <span class="material-icons-sharp">assignment_returned</span>
+                        <h3>Referrals</h3>
+                        <span class="message-count">1</span>    
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">post_add</span>
+                        <h3>Job Posting</h3>
+                    </a>
+                    <a href="../html/profile_messages.html">
+                        <span class="material-icons-sharp">inbox</span>
+                        <h3>Messages</h3>
+                        <span class="message-count">2</span>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">settings</span>
+                        <h3>Setting</h3>
+                    </a>
+                    <a href="../index.html">
+                        <span class="material-icons-sharp">logout</span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+
+            <main>
+                <div class="dashboard">
+                    <h1>University of the East</h1>
+                    <div class="date">
+                        <span id="time"></span>
+                    </div>
+
+                    <div class="top-applicants">
+                        <h2 style="margin: 10px;">Position Applied</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title/Position</th>
+                                    <th>Rank</th>
+                                    <th>Department</th>
+                                    <th>Opening Date</th>
+                                    <th>End Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#">Show All</a>
+                    </div>
+                </div>
+            </main>
+            <div class="right">
+                <div class="top">
+                    <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Ken<b></p>
+                            <small class="text-muted">
+                                Applicant
+                            </small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="../images/sample.jpg">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-updates">
+                    <h2>Recent Updates</h2>
+                    <div class="updates">
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="../images/Image Slide 2.jpg">
+                            </div>
+                            <div class="message">
+                                <p><b>CBA Office</b> is reviewing your application.</p>
+                                <smal class="text-muted">
+                                    3 Days Ago
+                                </smal>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="department-operation">
+                    <h2>Department Posting</h2>
+                    <div class="item cfad">
+                        <div class="icon">
+                            <span class="material-icons-sharp">design_services</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>College of Fine Arts, Architecture and Design</h3>
+                                <small class="muted-text">Last Month</small>
+                            </div>
+                            <h5 class="success">+17%</h5>
+                            <h3>32</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="divider">
+                    <div style="float:left;margin: none;height: 5px;background-color: #B80000;width: 40%;">&nbsp;</div>
+                    <div style="float:left;top: 80px;left: 40%;height: 5px;background-color: #b83a00;width: 30%;"></div>
+                    <div style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;"></div>
+                </div>
+        </div>
+        <script src="../dark.js" type="text/javascript"></script>
+        <script src="../time.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
+        <script>
+            fetch("../conn.php")
+            .then((response) => {
+                if(!response.ok){
+                    throw new Error("Something went wrong!");
+                }
+
+                return response.json();
+            })
+            .then((data) => {
+                var newStr = data.replaceAll("array", "\n");
+                const array = newStr.split("\n");
+
+                array.forEach(arr => {
+                    const new_arr = arr.split(" ");
+                    const tr = document.createElement('tr');
+                    const trContent = '<td>' + new_arr[0].replaceAll("_", " ") + '</td><td>' + new_arr[1].replaceAll("_", " ") + '</td><td>' + new_arr[2].replaceAll("_", " ") + '</td><td>' + new_arr[3].replaceAll("_", " ") + '</td><td>' + new_arr[4].replaceAll("_", " ") + '</td><td><a href="#">Apply</a></td>'
+                    tr.innerHTML = trContent;
+                    document.querySelector('table tbody').appendChild(tr);
+                })
+                alert("Hello " + array[1].replaceAll("_", " "));
+            })
+            .catch((error) => {});
+        </script>
+    </body>
+</html>

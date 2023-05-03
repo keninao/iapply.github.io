@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>University of the East OJA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../css/style10.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/modal.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/table.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="index">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-navicon"></i>
+                </label>
+                <label class="logo"><img src="../images/uelogo.png">UNIVERSITY OF THE EAST</label>
+                <ul>
+                    <li><a class="active" href="#">Job Vacancy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </nav>
+
+            <div class="divider">
+                <div style="float:left;margin: none;top: 80px;left: 0px;height: 5px;background-color: #B80000;width: 40%;"></div>
+                <div style="float:left;top: 80px;height: 5px;background-color: #b83a00;width: 30%;"></div>
+                <div style="float:left;top: 80px;height: 5px;background-color: #b87800;width: 30%;"></div>
+            </div>
+
+            <section>
+                <div class="container">
+                    <h1>Online Job Admission</h1>
+                </div>
+
+                <div class="depart">
+                    <h2>Department</h2>
+                    <ul>
+                        <li>EHSD</li>
+                        <li>CAS</li>
+                        <li>ENG</li>
+                        <li>BSA</li>
+                        <li>CBA</li>
+                    </ul>
+                </div>
+
+                <p style="width: 100%; text-align: center;"><a href="../index.php">Login</a> or <a href="#" id="signin">Register</a> to apply.</p><br><br>
+
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-sort onclick="sortTable(0, this)">Title/Position Summary</th>
+                                <th data-sort onclick="sortTable(1, this)">Rank</th>
+                                <th data-sort onclick="sortTable(2, this)">Department</th>
+                                <th data-sort onclick="sortTable(3, this)">Hiring Start</th>
+                                <th data-sort onclick="sortTable(4, this)">Hiring Deadline</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+            </section>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p class="close">&times;</p>
+                <img src="../images/uelogo.png" class="logo">
+                <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2><br><br>
+                <input type="text" id="modal" name="lastname" placeholder="Last name">
+                <input type="text" id="modal" name="suffix" placeholder="Suffix">
+                <input type="text" id="modal" name="firstname" placeholder="First name">
+                <input type="text" id="modal" name="middlename" placeholder="Middle name">
+                <input type="date" style="display:none;">
+                <input type="text" id="modal" name="date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" placeholder="Date of Birth">
+                <input type="text" id="modal" name="email" placeholder="Email">
+                <select>
+                    <option disabled style="color:#5f5f5f">Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <select>
+                    <option disabled style="color:#5f5f5f">Marital Status</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Widowed</option>
+                    <option>Divorced</option>
+                </select>
+                <br>
+                <input type="checkbox" id="checkagree" style="margin-left: 15%;width: 2em;"><a href="#" style="color:black;text-decoration:underline;">I agree with the Terms and Conditions</a>
+                <br><br><br><br>
+                <button type="submit" class="next" id="confirm" onclick="openPopup()">Register</button>
+                <br><br><br>
+                 
+            </div>   
+            <div class="popup" id="popup">
+                <img src="../images/check.png">
+                <h2>Account Created!</h2>
+                <p>Your details has been successfully submitted. Here is your Reference Number <p id="random_inner_container"></p>for your login.<br> Your password is set to your birthdate mmdateyear
+                (ex. 07152001). Thanks!</p>
+                <button type="button" id="donebtn" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+            <div class="divider">
+                <div style="float:left;margin: none;height: 5px;background-color: #B80000;width: 40%;">&nbsp;</div>
+                <div style="float:left;top: 80px;left: 40%;height: 5px;background-color: #b83a00;width: 30%;"></div>
+                <div style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;"></div>
+            </div>
+    </div>
+    <script src="../index.js" type="text/javascript"></script>
+    <script src="../table-sort.js"></script>
+    <script>
+        fetch("../conn.php")
+            .then((response) => {
+                if(!response.ok){
+                    throw new Error("Something went wrong!");
+                }
+
+                return response.json();
+            })
+            .then((data) => {
+                var newStr = data.replaceAll("array", "\n");
+                const array = newStr.split("\n");
+
+                array.forEach(arr => {
+                    const new_arr = arr.split(" ");
+                    const tr = document.createElement('tr');
+                    const trContent = '<td>' + new_arr[0].replaceAll("_", " ") + '</td><td>' + new_arr[1].replaceAll("_", " ") + '</td><td>' + new_arr[2].replaceAll("_", " ") + '</td><td>' + new_arr[3].replaceAll("_", " ") + '</td><td>' + new_arr[4].replaceAll("_", " ") + '</td><td><a href="#">Apply</a></td>'
+                    tr.innerHTML = trContent;
+                    document.querySelector('table tbody').appendChild(tr);
+                })
+                alert("Hello " + array[1].replaceAll("_", " "));
+            })
+            .catch((error) => {});
+    </script>
+    </body>
+</html>

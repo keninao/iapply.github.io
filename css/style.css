@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+div.center{
+    margin: auto;
+    width: 450px;
+    height: 100%;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 30px 55px rgba(0, 0, 0, 0.25);
+}
+
+div.center:hover{
+    z-index: 100;
+    animation: scale 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 200px 0px;
+}
+
+.logo{
+    display: block;
+    width: 78.08px;
+    height: 75px;
+    margin:auto;
+    margin-top: 12px;
+}
+
+.title{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 24px;
+
+    font-family: 'Inter';
+    text-align:center;
+    font-weight: 1000;
+    font-size: 24px;
+}
+
+.school{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10px;
+
+    font-family: 'Inter';
+    text-align:center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.head3{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10px;
+
+    font-family: 'Inter';
+    text-align:center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.textbox{
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+    padding: 10px;
+
+    font-family: 'Inter';
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(88, 88, 88, 0.5);
+}
+
+.code{
+    width: 129px;
+    height: 40px;
+
+    font-family: 'Inter';
+    text-align: left;
+    font-size: 11px;
+    padding: 10px;
+    
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(88, 88, 88, 0.5);
+}
+
+.sendcode{
+    display: block;
+    width: 140px;
+    height: 40px;
+    padding: 10px;
+
+    font-family: 'Inter';
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.float-container {
+    display: block;
+    width: auto;
+    height: 80px;
+    margin-left: 22%;
+}
+
+.float-child {
+    width: 38%;
+    float: left;
+}  
+
+.signin{
+    box-sizing: border-box;
+    
+    display: block;
+    margin-left: 0%;
+    margin-top: 10px;
+    width: 111px;
+    height: 30px;
+
+    font-family: 'Inter';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    background: #E19494;
+    border: 1px solid #C56161;
+    border-radius: 25px;
+}
+
+.apply{
+    box-sizing: border-box;
+    
+    display: block;
+    margin-left: 0%;
+    margin-top: 5px;
+    padding: 4%;
+    width: 111px;
+    height: 30px;
+
+    font-family: 'Inter';
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color:black;
+    text-decoration: none;
+
+    background: #DFDFDF;
+    border: 1px solid #8b8b8b;
+    border-radius: 25px;
+}
+
+.apply:hover{
+    z-index: 100;
+    animation: scale 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaledown {
+    0%{
+        -webkit-animation: scale(1.1);
+        transform: scale(1.1);
+    }
+    100%{
+        -webkit-animation: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+@keyframes scale {
+    0%{
+        -webkit-animation: scale(1.0);
+        transform: scale(1.0);
+    }
+    100%{
+        -webkit-animation: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+.signin:hover{
+    z-index: 100;
+    animation: scale 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
+.rem{
+    margin-left: 0%;
+    margin-top: 10%;
+    width: auto;
+    height: 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    color: #676666;
+}
+
+.forgot{
+    display: block;
+    width: 140px;
+    height: 20px;
+
+    font-family: 'Inter';
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.teach, .nonteach{
+    width: auto;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 1px;
+    background-color: #6fd649;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content{
+    text-align: center;
+    width: 50%;
+}
+
+.captcha{
+    width: 100%;
+    display: inline-block;
+}
+
+#captchaBackground {
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    width: 190px;
+    background-color:#bebebe65;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+#captcha {
+    height: 50px;
+    width: 150px;
+    color:#363636;
+    display: block;
+}
+
+#refreshButton {
+    background-color: #363636;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+}
+#textBox {
+    height: 25px;
+}
+.incorrectCaptcha {
+    color: #FF0000;
+}
+.correctCaptcha {
+    color: #7FFF00;
+}
