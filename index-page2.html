@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <title>University of the East OJA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="../css/style10.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/modal.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/table.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/style10.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/modal.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/table.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/popup.css" rel="stylesheet" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -19,7 +19,7 @@
                 <label for="check" class="checkbtn">
                     <i class="fa fa-navicon"></i>
                 </label>
-                <label class="logo"><img src="../images/uelogo.png">UNIVERSITY OF THE EAST</label>
+                <label class="logo"><img src="./images/uelogo.png">UNIVERSITY OF THE EAST</label>
                 <ul>
                     <li><a class="active" href="#">Job Vacancy</a></li>
                     <li><a href="#">About</a></li>
@@ -51,7 +51,7 @@
                     </ul>
                 </div>
 
-                <p style="width: 100%; text-align: center;"><a href="../index.php">Login</a> or <a href="#" id="signin">Register</a> to apply.</p><br><br>
+                <p style="width: 100%; text-align: center;"><a href="./index.php">Login</a> or <a href="#" id="signin">Register</a> to apply.</p><br><br>
 
                 <div class="data-table">
                     <table>
@@ -77,7 +77,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <p class="close">&times;</p>
-                <img src="../images/uelogo.png" class="logo">
+                <img src="./images/uelogo.png" class="logo">
                 <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2><br><br>
                 <input type="text" id="modal" name="lastname" placeholder="Last name">
                 <input type="text" id="modal" name="suffix" placeholder="Suffix">
@@ -121,10 +121,10 @@
                 <div style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;"></div>
             </div>
     </div>
-    <script src="../index.js" type="text/javascript"></script>
-    <script src="../table-sort.js"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./table-sort.js"></script>
     <script>
-        fetch("../conn.php")
+        fetch("./conn.php")
             .then((response) => {
                 if(!response.ok){
                     throw new Error("Something went wrong!");
