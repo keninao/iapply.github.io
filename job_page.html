@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>University of the East OJA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../css/style10.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../css/job_page.css">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="index">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa fa-navicon"></i>
+                </label>
+                <label class="logo"><img src="../images/uelogo.png">UNIVERSITY OF THE EAST</label>
+                <ul>
+                    <li><a class="active" href="#">Job Vacancy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="../applicantlogin.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <div class="divider">
+                <label style="float:left;margin: none;height: 5px;background-color: #B80000;width: 40%;">&nbsp;</label>
+                <label style="float:left;top: 80px;left: 40%;height: 5px;background-color: #b83a00;width: 30%;">&nbsp;</label>
+                <label style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;">&nbsp;</label>
+            </div>
+
+            <section>
+                <div class="container">
+                    <h1>Online Job Admission</h1>
+                </div>
+
+                <div class="job_posting">
+                    <div class="left">
+                        <h1>Job Position</h1>
+                        <h2>Department</h2>
+                        <h3>Rank</h3>
+                        <p>Summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="right">
+                        <h3>
+                            Qualification
+                        </h3>
+
+                        <ul>
+                            <li>Master's degree in finance.</li>
+                            <li>10 years' experience in a nursing supervisory role.</li>
+                            <li>Seven years as an Army medic, four years as a paramedic and recently obtained bachelor's degree in nursing.</li>
+                            <li>15 years as manager of tax preparation center, currently enrolled in MBA program with a projected graduation date of 2021.</li>
+                            <li>Experience in high-volume call center.</li>
+                            <li>Worked as a telephone customer service representative for a major mail order distribution company.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        &nbsp;
+                    </div>
+                    <div class="button">
+                        <button class="apply" id="apply">Apply Now</button>
+                    </div>
+                </div>
+
+                
+            </section>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content1" id="modal-content1">
+                <p class="close">&times;</p>
+                <img src="../images/uelogo.png" class="logo">
+                <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2>
+                <p class="warning">
+                    <span class="material-symbols-sharp">notification_important</span>Attention: Please note that you must be logged in to your account in order to apply for this job. If you do not have an account yet, please create one before proceeding 
+                    with your application. Applying without being logged in will result in an incomplete application and may cause delays in the hiring process. Thank you for your understanding!
+                </p>
+                <input type="text" id="modal1" name="username" placeholder="Username"><label id="error1" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <input type="text" id="modal2" name="password" placeholder="Password"><label id="error2" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <input type="text" id="modal3" name="conpass" placeholder="Confirm Password"><label id="error3" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <br><label id="error0" class="error"><span class='material-symbols-outlined'>search_check</span><p id="err"></p></label>
+                <ul class="req">
+                    <li>Password Requirements</li>
+                    <li><span class="material-symbols-sharp">check</span>At least 12 characters long but 14 or more is better.</li>
+                    <li><span class="material-symbols-sharp">check</span>A combination of uppercase letters, lowercase letters, numbers, and symbols.</li>
+                    <li><span class="material-symbols-sharp">check</span>Not a word that can be found in a dictionary or the name of a person, character, product, or organization.</li>
+                    <li><span class="material-symbols-sharp">check</span>Significantly different from your previous passwords.</li>
+                    <li><span class="material-symbols-sharp">check</span>Easy for you to remember but difficult for others to guess. Consider using a memorable phrase like "6MonkeysRLooking^".</li>
+                </ul>
+                <button type="submit" class="next" id="next" onclick="next()">Next</button>
+                <br><br><br>
+            </div>
+
+            <div class="modal-content2">
+                <p class="back">&leftarrow;</p>
+                <h2 style="text-align: center;">Personal Information<br><p style="font-size: 14px;font-weight: 100;">Fill up the form.</p></h2><br>
+                <input type="date" style="display:none;">
+                <input type="text" id="modal" name="firstname" placeholder="First name">
+                <input type="text" id="modal" name="middlename" placeholder="Middle name">
+                <input type="text" id="modal" name="lastname" placeholder="Last name">
+                <input type="text" id="modal" name="suffix" placeholder="Suffix">
+                <input type="text" id="modal" name="contact" placeholder="Contact">
+                <input type="text" id="modal" name="date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" placeholder="Date of Birth">
+                <input type="text" id="modal" name="email" placeholder="Email">
+                <select>
+                    <option disabled style="color:#5f5f5f">Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <select>
+                    <option disabled style="color:#5f5f5f">Marital Status</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Widowed</option>
+                    <option>Divorced</option>
+                </select>
+                <br>
+                <input type="checkbox" id="checkagree" style="width: 2em;" onclick="agree()"><a href="#" style="color:black;text-decoration:underline;">I agree with the Terms and Conditions</a><br><br>
+                <button type="submit" class="registerdisabled" id="confirm" onclick="openPopup()">Register</button>
+                <br><br><br>
+                 
+            </div>   
+            <div class="popup" id="popup">
+                <img src="../images/check.png">
+                <h2>Account Created!</h2>
+                <p>Your details has been successfully submitted. Here is your Reference Number <p id="random_inner_container"></p>for your login.<br> Your password is set to your birthdate mmdateyear
+                (ex. 07152001). Thanks!</p>
+                <button type="button" id="donebtn" onclick="closePopup()">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="divider">
+            <label style="float:left;margin: none;height: 5px;background-color: #B80000;width: 40%;">&nbsp;</label>
+            <label style="float:left;top: 80px;left: 40%;height: 5px;background-color: #b83a00;width: 30%;">&nbsp;</label>
+            <label style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;">&nbsp;</label>
+        </div>
+    </div>
+    <script src="../apply.js"></script>
+    <script src="../table-sort.js"></script>
+    <script>
+        fetch("../conn.php")
+            .then((response) => {
+                if(!response.ok){
+                    throw new Error("Something went wrong!");
+                }
+
+                return response.json();
+            })
+            .then((data) => {
+                var newStr = data.replaceAll("array", "\n");
+                const array = newStr.split("\n");
+
+                array.forEach(arr => {
+                    const new_arr = arr.split(" ");
+                    const tr = document.createElement('tr');
+                    const trContent = '<td>' + new_arr[0].replaceAll("_", " ") + '</td><td>' + new_arr[1].replaceAll("_", " ") + '</td><td>' + new_arr[2].replaceAll("_", " ") + '</td><td>' + new_arr[3].replaceAll("_", " ") + '</td><td>' + new_arr[4].replaceAll("_", " ") + '</td><td><a href="#">Apply</a></td>'
+                    tr.innerHTML = trContent;
+                    document.querySelector('table tbody').appendChild(tr);
+                })
+                alert("Hello " + array[1].replaceAll("_", " "));
+            })
+            .catch((error) => {});
+    </script>
+    </body>
+</html>
