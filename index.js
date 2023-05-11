@@ -1,5 +1,7 @@
 randomizer = document.getElementById("random_inner_container");
 
+var apply = document.getElementsByClassName("apply");
+
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("signin");

@@ -1,3 +1,8 @@
-var datetime = new Date().toDateString();
-console.log(datetime);
-document.getElementById("time").textContent = datetime;
+function refreshTime(){
+    var dateString = new Date().toLocaleString();
+    console.log(dateString);
+    var formatted = dateString.replace(",", " - ");
+    document.getElementById("date").textContent = formatted;
+}
+
+setInterval(refreshTime, 1000);
