@@ -120,7 +120,7 @@ div.center:hover{
     display: block;
     width: auto;
     height: 80px;
-    margin-left: 22%;
+    margin-left: 15%;
 }
 
 .float-child {
@@ -135,16 +135,18 @@ div.center:hover{
     margin-left: 0%;
     margin-top: 10px;
     width: 111px;
-    height: 30px;
+    line-height: 20px;
 
     font-family: 'Inter';
     text-align: center;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
-    line-height: 15px;
+    text-decoration: none;
 
-    background: #E19494;
+    color:#f0f0f0;
+
+    background: #b80000;
     border: 1px solid #C56161;
     border-radius: 25px;
 }
@@ -270,8 +272,7 @@ div.center:hover{
 }
 
 #captcha {
-    height: 50px;
-    width: 150px;
+    height: 65px;
     color:#363636;
     display: block;
 }

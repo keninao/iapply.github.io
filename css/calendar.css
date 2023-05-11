@@ -34,8 +34,10 @@
     }
 
     .modify_event{
-        margin: 0;
         margin-left: auto;
         margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
     }
 }

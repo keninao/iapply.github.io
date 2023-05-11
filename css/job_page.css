@@ -1,0 +1,386 @@
+.job_posting{
+    display: grid;
+    grid-template-columns: 2fr 20rem;
+    gap: 2rem;
+
+    background-color: #ffffff;
+}
+
+.left{
+    padding: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.left h1{
+    font-size: 2.4rem;
+}
+
+.left h2{
+    font-size: 1.4rem;
+}
+
+.left h3{
+    font-size: 1rem;
+}
+
+.left h1,.left h2,.left h3{
+    padding-left: 2rem;
+    text-align: center;
+}
+
+.left p{
+    padding: 3rem;
+}
+
+.right{
+    margin-top: 3rem;
+}
+
+.right h2{
+    padding: 1rem;
+}
+
+.right ul li{
+    padding: 0.5rem;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-left: 1rem;
+}
+
+.button .apply{
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: .6rem;
+    border-radius: 1.2rem;
+
+    background-color: #B80000;
+    color: white;
+}
+
+.button .apply:hover{
+    background-color: #790a0a;
+}
+
+.modal {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    padding: 90px;
+    width: 200%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+  
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal .logo{
+    display: block;
+    width: 78.08px;
+    height: 75px;
+    margin:auto;
+    margin-top: 12px;
+}
+  
+.modal-content1 {
+    position: relative;
+    float: left;
+    background-color: #ffffff;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    height: 100%;
+
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+
+    font-family: 'Inter';
+    animation-name: animatetop;
+    animation-duration: 1s
+}
+
+
+.modal-content2 {
+    position: relative;
+    float: left;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 5px;
+
+    font-family: 'Inter';
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animateleft {
+    from {margin-left: 0;}
+    to {margin-left: -100%;}
+}
+
+@keyframes animateright {
+    from {margin-left: -100%;}
+    to {margin-left: 0;}
+}
+
+.close {
+    color: #aaaaaa;
+    margin: 0 0 0 auto;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back {
+    color: #aaaaaa;
+    margin: 0 0 0 auto;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.back:hover, .back:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text], select {
+    width: 60%;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: .2rem 0;
+}
+
+input[type=date]{
+    width: 60%;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.next{
+    display: inline-block;
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+
+    text-decoration: none;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-weight: 400px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.register{
+    display: inline-block;
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+
+    text-decoration: none;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-weight: 400px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.registerdisabled{
+    display: inline-block;
+    width: 60%;
+    background-color: #a2d3a3;
+    color: rgba(255, 255, 255, 0.863);
+
+    text-decoration: none;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 4px;
+    cursor:default;
+
+    font-family: 'Inter';
+    font-weight: 400px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.next:hover {
+    background-color: #45a040;
+}
+
+.next:active{
+    background-color: #627264;
+}
+
+.captcha{
+    width: 100%;
+    display: inline-block;
+}
+
+#captchaBackground {
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    width: 190px;
+    background-color:#bebebe65;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+#captcha {
+    height: 65px;
+    color:#363636;
+    display: block;
+}
+
+#refreshButton {
+    background-color: #363636;
+    color: white;
+    border: 0px;
+    font-weight: bold;
+}
+
+#textBox {
+    height: 25px;
+}
+
+.incorrectCaptcha {
+    color: #FF0000;
+}
+
+.correctCaptcha {
+    color: #7FFF00;
+}
+
+.warning{
+    font-size: .8rem;
+    background-color: #d81d1d;
+    color: white;
+
+    text-align: justify;
+
+    border: .5px dashed black;
+
+    padding: 0.8rem;
+    margin: 1.7rem;
+}
+
+.error{
+    color:#d10000;
+    display:inline;
+    opacity: 0;
+}
+
+.req{
+    text-align: justify;
+    margin: 0 15% 0 15%;
+    padding: 1rem;
+}
+
+.req li{
+    font-size: .8rem;
+    margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .modal-content1{
+        width: 100%;
+    }
+    .modal-content2{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 786px) {
+    .job_posting{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    
+        background-color: #ffffff;
+    }
+        
+    .right{
+        margin-top: 3rem;
+        padding: 1rem;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .right h3{
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+    }
+
+    .right ul{
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+    }
+
+}

@@ -1,3 +1,9 @@
+.edit{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 1rem;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -8,35 +14,16 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-  
-.modal-body {
-    padding: 2px 16px;
-}
-
-.modal .logo{
-    display: block;
-    width: 78.08px;
-    height: 75px;
-    margin:auto;
-    margin-top: 12px;
-}
-  
 .modal-content {
     position: relative;
-    background-color: #ffffff;
+    background-color: var(--color-background);
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 50%;
+    width: 40%;
     height: auto;
 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -53,48 +40,7 @@
     to {top: 0; opacity: 1}
 }
 
-.close {
-    color: #aaaaaa;
-    margin: 0 0 0 auto;
-    font-size: 28px;
-    font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
-}
-
-.close:hover, .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.back {
-    color: #aaaaaa;
-    margin: 0 0 0 auto;
-    font-size: 28px;
-    font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
-}
-
-.back:hover, .back:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 input[type=text]#modal, select {
-    width: 80%;
-    padding: 12px 16px;
-    margin: 0px 0px 6px 10%;
-    background-color: #FFFFFF;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=email], select {
     width: 80%;
     padding: 12px 16px;
     margin: 0px 0px 6px 10%;
@@ -124,7 +70,8 @@ input[type=date], select {
 
     text-decoration: none;
     padding: 14px 20px;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
 
     border: none;
     border-radius: 4px;
@@ -142,4 +89,56 @@ input[type=date], select {
 
 .next:active{
     background-color: #627264;
+}
+
+.button{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cancel{
+    display: inline-block;
+    width: 80%;
+    background-color: #af4c4c;
+    color: white;
+
+    text-decoration: none;
+    padding: 14px 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-weight: 400px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.cancel:hover {
+    background-color: #a04040;
+}
+
+.content{
+    margin: 2rem;
+}
+
+@media screen and (max-width: 768px){
+    .modal-content{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    .modal-content{
+        width: auto;
+    }
+
+    .modal{
+        padding: 0;
+        padding-top: 100px;
+    }
 }
