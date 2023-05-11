@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <title>University of the East OJA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="../css/style10.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/index.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="../css/job_page.css">
+        <link href="./css/style10.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/popup.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="./css/job_page.css">
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -20,7 +20,7 @@
                 <label for="check" class="checkbtn">
                     <i class="fa fa-navicon"></i>
                 </label>
-                <label class="logo"><img src="../images/uelogo.png">UNIVERSITY OF THE EAST</label>
+                <label class="logo"><img src="./images/uelogo.png">UNIVERSITY OF THE EAST</label>
                 <ul>
                     <li><a class="active" href="#">Job Vacancy</a></li>
                     <li><a href="#">About</a></li>
@@ -84,7 +84,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content1" id="modal-content1">
                 <p class="close">&times;</p>
-                <img src="../images/uelogo.png" class="logo">
+                <img src="./images/uelogo.png" class="logo">
                 <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2>
                 <p class="warning">
                     <span class="material-symbols-sharp">notification_important</span>Attention: Please note that you must be logged in to your account in order to apply for this job. If you do not have an account yet, please create one before proceeding 
@@ -136,7 +136,7 @@
                  
             </div>   
             <div class="popup" id="popup">
-                <img src="../images/check.png">
+                <img src="./images/check.png">
                 <h2>Account Created!</h2>
                 <p>Your details has been successfully submitted. Here is your Reference Number <p id="random_inner_container"></p>for your login.<br> Your password is set to your birthdate mmdateyear
                 (ex. 07152001). Thanks!</p>
@@ -151,10 +151,10 @@
             <label style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;">&nbsp;</label>
         </div>
     </div>
-    <script src="../apply.js"></script>
-    <script src="../table-sort.js"></script>
+    <script src="./apply.js"></script>
+    <script src="./table-sort.js"></script>
     <script>
-        fetch("../conn.php")
+        fetch("./conn.php")
             .then((response) => {
                 if(!response.ok){
                     throw new Error("Something went wrong!");
