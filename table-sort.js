@@ -26,3 +26,24 @@ function sortTable(n, evt){
         tbody.appendChild(bRow);
     });
 }
+
+fetch("../getdepart.php")
+.then((response) => {
+    if(!response.ok){
+        throw new Error("Something went wrong!");
+    }
+
+    return response.json();
+})
+.then((data) =>{
+    console.log(data);
+    let new_data = data.split("-");
+    
+    for(let i = 0; i < new_data.length-1; i++){
+        const new_arr = new_data[i];
+        const tr = document.createElement('li');
+        const trContent = new_arr;
+        tr.innerHTML = trContent;
+        document.getElementById("depart").appendChild(tr);
+    }
+}).catch();

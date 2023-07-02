@@ -4,9 +4,10 @@
         <meta charset="UTF-8" />
         <title>University of the East OJA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="../css/modal.css" rel="stylesheet" />
         <link href="../css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/result.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <style>
             body{
@@ -14,7 +15,7 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
-            * {
+            *{
                 box-sizing: border-box;
             }
         </style>
@@ -31,15 +32,15 @@
                 <div class="captcha">
                     <div id="captchaBackground">
                         <canvas id="captcha">captcha text</canvas>
-                        <input id="textBox" type="text" name="text">
                         <div id="buttons">
                             <button id="refreshButton" type="submit">Refresh</button>
                         </div>
                     </div>
                 </div>
+                <input class="textbox" id="captchatext" type="text" placeholder="Enter Captcha here">
                 <div class="float-container">
                     <div class="float-child">
-                        <button type="submit" class="signin" onclick="location.href='../html/admin.html'">Sign in</button>
+                        <input type="button" class="signin" onclick="getAdmin()" value="Sign in"></input>
                     </div>
                     <div class="float-child">
                         <div class="rem"><label for="remember" class="rem">Remember me?</label><input type="checkbox" name="remember" id="remember"/></div>
@@ -47,52 +48,14 @@
                     </div>
                 </div>
             </div>
-            <script>
-                var btn = document.getElementById("signin");
-                
-                var span = document.getElementsByClassName("close")[0]; 
-
-                let captchaText = document.querySelector('#captcha');
-                var ctx = captchaText.getContext("2d");
-                ctx.font = "50px Roboto";
-                ctx.fillStyle = "red";
-
-
-                let userText = document.querySelector('#textBox');
-                let refreshButton = document.querySelector('#refreshButton');
-
-                let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-                let emptyArr = [];
-
-                for (let i = 1; i <= 7; i++) {
-                    emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-                }
-                var c = emptyArr.join('');
-                ctx.fillText(emptyArr.join(''),captchaText.width/4, captchaText.height/2);
-
-                userText.addEventListener('keyup', function(e) {
-                    if (e.keyCode === 13) {
-                        if (userText.value === c) {
-                            output.classList.add("correctCaptcha");
-                            output.innerHTML = "Correct!";
-                        } else {
-                            output.classList.add("incorrectCaptcha");
-                            output.innerHTML = "Incorrect, please try again";
-                        }
-                    }
-                });
-                refreshButton.addEventListener('click', function() {
-                    userText.value = "";
-                    let refreshArr = [];
-                    for (let j = 1; j <= 7; j++) {
-                        refreshArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-                    }
-                    ctx.clearRect(0, 0, captchaText.width, captchaText.height);
-                    c = refreshArr.join('');
-                    ctx.fillText(refreshArr.join(''),captchaText.width/4, captchaText.height/2);
-                    output.innerHTML = "";
-                });
-            </script>
         </div>
+
+        <div class="result" id="result">
+            <div class="result-content">
+                <div class="message"><span class="material-symbols-outlined">disabled_by_default</span>&nbsp;<p id="message"></p></div>
+            </div>
+        </div>
+        <script src="../login.js"></script>
+        <script src="../captcha.js"></script>
     </body>
 </html>

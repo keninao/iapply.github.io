@@ -4,13 +4,17 @@
         <meta charset="UTF-8" />
         <title>University of the East OJA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./css/style10.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/modal.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/table.css" rel="stylesheet" type="text/css"/>
-        <link href="./css/popup.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/style10.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/job_page.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/table.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/popup.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="../css/result.css">
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
     <body>
         <div class="wrapper">
@@ -19,13 +23,15 @@
                 <label for="check" class="checkbtn">
                     <i class="fa fa-navicon"></i>
                 </label>
-                <label class="logo"><img src="./images/uelogo.png">UNIVERSITY OF THE EAST</label>
+                <label class="logo"><img src="../images/uelogo.png">UNIVERSITY OF THE EAST</label>
                 <ul>
                     <li><a class="active" href="#">Job Vacancy</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Feedback</a></li>
+                    <li><a href="../applicantlogin.html">Login</a></li>
+                    <li><a href="#" id="apply">Register</a></li>
                 </ul>
             </nav>
 
@@ -39,25 +45,13 @@
                 <div class="container">
                     <h1>Online Job Admission</h1>
                 </div>
-
-                <div class="choose">
-                    <ul>
-                        <li><a href="./applicantlogin.html">Login</a></li>
-                        <li><a href="#" id="signin">Register</a></li>
-                    </ul>
-                </div>
                 <div class="depart">
                     <h2>Department</h2>
-                    <ul>
-                        <li>EHSD</li>
-                        <li>CAS</li>
-                        <li>ENG</li>
-                        <li>BSA</li>
-                        <li>CBA</li>
+                    <ul id="depart">
                     </ul>
                 </div>
 
-                <div style="width:50%;margin-left: auto;margin-right: auto;text-align: justify;">
+                <div class="message">
                     <h3 style="text-align: center;">Welcome Message</h3>
                     <p>Welcome to our job posting website! We are excited to connect job seekers with employers who are looking for talented and motivated individuals like you.<br><br>
                         Our website is designed to help you find your dream job quickly and easily. We partner with top employers from a variety of industries to bring you a wide range of job opportunities.<br><br>
@@ -69,22 +63,16 @@
                     <table>
                         <thead>
                             <tr>
-                                <th data-sort onclick="sortTable(0, this)">Title/Position Summary</th>
-                                <th data-sort onclick="sortTable(1, this)">Rank</th>
-                                <th data-sort onclick="sortTable(2, this)">Department</th>
-                                <th data-sort onclick="sortTable(3, this)">Hiring Start</th>
-                                <th data-sort onclick="sortTable(4, this)">Hiring Deadline</th>
+                                <th data-sort>Title/Position Summary</th>
+                                <th data-sort>Rank</th>
+                                <th data-sort>Department</th>
+                                <th data-sort>Hiring Start</th>
+                                <th data-sort>Hiring Deadline</th>
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="job">
                             <tr>
-                                <td>Biochemistry - Assistant Professor (tenure-track)</td>
-                                <td>Assistant Professor</td>
-                                <td>CCSS</td>
-                                <td>07/15/2023</td>
-                                <td>09/15/2023</td>
-                                <td><a href="./job_page.html">Apply</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -93,24 +81,56 @@
             </section>
 
         </div>
+        
         <div id="myModal" class="modal">
-            <div class="modal-content">
+            <div class="modal-content1" id="modal-content1">
                 <p class="close">&times;</p>
                 <img src="../images/uelogo.png" class="logo">
-                <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2><br><br>
-                <input type="text" id="modal" name="lastname" placeholder="Last name">
-                <input type="text" id="modal" name="suffix" placeholder="Suffix">
-                <input type="text" id="modal" name="firstname" placeholder="First name">
-                <input type="text" id="modal" name="middlename" placeholder="Middle name">
+                <h2 style="text-align: center;">University of the East<br><p style="font-size: 14px;font-weight: 100;">Register to Online Faculty Admission</p></h2>
+                <br><br>
+                <input type="text" id="modal1" name="username" placeholder="Username"><label id="error1" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <input type="password" id="modal2" name="password" style="margin-left: 24px;" placeholder="Password"><input type="checkbox" id="seepass"><span id="passicon" name="seepass" class="material-symbols-sharp">visibility</span><label id="error2" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <input type="password" id="modal3" name="conpass" placeholder="Confirm Password"><label id="error3" class="error"><span class="material-symbols-sharp">cancel</span></label>
+                <br><label id="error0" class="error"><span class='material-symbols-outlined'>search_check</span><p id="err"></p></label>
+                <ul class="req">
+                    <li>Password Requirements</li>
+                    <li><span id="req1" class="material-symbols-sharp">check</span>At least 12 characters long but 14 or more is better.</li>
+                    <li><span id="req2" class="material-symbols-sharp">check</span>Must have uppercase.</li>
+                    <li><span id="req3" class="material-symbols-sharp">check</span>Must have lowercase letters.</li>
+                    <li><span id="req4" class="material-symbols-sharp">check</span>Must have numbers.</li>
+                </ul>
+                <button type="submit" class="next" id="next" onclick="next()">Next</button>
+                <br><br><br>
+            </div>
+
+            <div class="modal-content2" id="modal-content2">
+                <p class="back">&leftarrow;</p>
+                <h2 style="text-align: center;">Personal Information<br>
+                    <p style="font-size: 14px;font-weight: 100;">Fill up the form.</p>
+                </h2><br>
                 <input type="date" style="display:none;">
-                <input type="text" id="modal" name="date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" placeholder="Date of Birth">
-                <input type="text" id="modal" name="email" placeholder="Email">
-                <select>
+                <input type="text" id="firstname" name="firstname" placeholder="First name"
+                    onkeypress="return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122 || event.charCode == 32"
+                    required>
+                <input type="text" id="middlename" name="middlename" placeholder="Middle name"
+                    onkeypress="return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122 || event.charCode == 32"
+                    required>
+                <input type="text" id="lastname" name="lastname" placeholder="Last name"
+                    onkeypress="return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122 || event.charCode == 32"
+                    required>
+                <input type="text" id="suffix" name="suffix" placeholder="Suffix"
+                    onkeypress="return event.charCode>=65 && event.charCode<=90 || event.charCode>=97 && event.charCode<=122 || event.charCode == 32 || event.charCode == 46">
+                <input type="text" id="contact" name="contact" placeholder="Contact"
+                    onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+                <input type="text" id="birthdate" name="birthdate" onfocus="(this.type='date')"
+                    onblur="if(!this.value) this.type='text'" placeholder="Date of Birth" required>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                <select id="gender">
                     <option disabled style="color:#5f5f5f">Gender</option>
                     <option>Male</option>
                     <option>Female</option>
                 </select>
-                <select>
+                <select id="civil">
                     <option disabled style="color:#5f5f5f">Marital Status</option>
                     <option>Single</option>
                     <option>Married</option>
@@ -118,19 +138,17 @@
                     <option>Divorced</option>
                 </select>
                 <br>
-                <input type="checkbox" id="checkagree" style="margin-left: 15%;width: 2em;"><a href="#" style="color:black;text-decoration:underline;">I agree with the Terms and Conditions</a>
-                <br><br><br><br>
-                <button type="submit" class="next" id="confirm" onclick="openPopup()">Register</button>
+                <input type="checkbox" id="checkagree" style="width: 2em;"><a href="#"
+                    style="color:black;text-decoration:underline;">I agree with the Terms and Conditions</a><br><br>
+                <button type="submit" class="register" id="confirm">Register</button>
                 <br><br><br>
-                 
-            </div>   
-            <div class="popup" id="popup">
-                <img src="../images/check.png">
-                <h2>Account Created!</h2>
-                <p>Your details has been successfully submitted. Here is your Reference Number <p id="random_inner_container"></p>for your login.<br> Your password is set to your birthdate mmdateyear
-                (ex. 07152001). Thanks!</p>
-                <button type="button" id="donebtn" onclick="closePopup()">OK</button>
             </div>
+        </div>
+        <div class="popup" id="popup">
+            <img src="../images/check.png">
+            <h2>Account Created!</h2>
+            <p>Your details has been successfully submitted. Thanks!</p>
+            <button type="button" id="donebtn">Click Here to Login</button>
         </div>
     </div>
     <div class="footer">
@@ -140,31 +158,15 @@
                 <div style="float:left;top: 80px;left: 70%;height: 5px;background-color: #b87800;width: 30%;"></div>
             </div>
     </div>
-    <script src="./index.js" type="text/javascript"></script>
-    <script src="./table-sort.js"></script>
-    <script>
-        fetch("./conn.php")
-            .then((response) => {
-                if(!response.ok){
-                    throw new Error("Something went wrong!");
-                }
 
-                return response.json();
-            })
-            .then((data) => {
-                var newStr = data.replaceAll("array", "\n");
-                const array = newStr.split("\n");
+    <div class="result" id="result">
+        <div class="result-content">
+            <div class="message"><span class="material-symbols-outlined">disabled_by_default</span><p id="message"></p></div>
+        </div>
+    </div>
 
-                array.forEach(arr => {
-                    const new_arr = arr.split(" ");
-                    const tr = document.createElement('tr');
-                    const trContent = '<td>' + new_arr[0].replaceAll("_", " ") + '</td><td>' + new_arr[1].replaceAll("_", " ") + '</td><td>' + new_arr[2].replaceAll("_", " ") + '</td><td>' + new_arr[3].replaceAll("_", " ") + '</td><td>' + new_arr[4].replaceAll("_", " ") + '</td><td><a href="../job_page.html">Apply</a></td>'
-                    tr.innerHTML = trContent;
-                    document.querySelector('table tbody').appendChild(tr);
-                })
-                alert("Hello " + array[1].replaceAll("_", " "));
-            })
-            .catch((error) => {});
-    </script>
+    <script src="../apply.js"></script>
+    <script src="../table-input.js"></script>
+    <script src="../table-sort.js"></script>
     </body>
 </html>

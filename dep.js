@@ -2,19 +2,11 @@ createjob = document.getElementById("createjob");
 updatejob = document.getElementById("updatejob");
 deletejob = document.getElementById("deletejob");
 
-createdep = document.getElementById("createdep");
-updatedep = document.getElementById("updatedep");
-deletedep = document.getElementById("deletedep");
-
 createrank = document.getElementById("createrank");
 updaterank = document.getElementById("updaterank");
 deleterank = document.getElementById("deleterank");
 
-var create = document.getElementById("createdepartment");
-
-var update = document.getElementById("updatedepartment");
-
-var delete_ = document.getElementById("deletedepartment");
+var notif = document.getElementById("notif");
 
 var createj = document.getElementById("createjobposting");
 
@@ -28,20 +20,18 @@ var updater = document.getElementById("updateranks");
 
 var deleter = document.getElementById("deleteranks");
 
-createdep.onclick = function() {
-    create.style.display = "block";
-}
+var ret = document.getElementById("return");
 
-updatedep.onclick = function() {
-    update.style.display = "block";
-}
+var done = document.getElementById("create_job");
 
-deletedep.onclick = function() {
-    delete_.style.display = "block";
+ret.onclick = function(){
+    createj.style.left = "0";
+    createj.style.animation = "animateright";
+    createj.style.animationDuration = "1s";
 }
 
 createjob.onclick = function() {
-    createj.style.display = "block";
+    createj.style.display = "grid";
 }
 
 updatejob.onclick = function() {
@@ -65,23 +55,106 @@ deleterank.onclick = function() {
 }
 
 window.onclick = function(event) {
-    if (event.target == create) {
-        create.style.display = "none";
-    }if(event.target == update){
-        update.style.display = "none";
-    }if(event.target == delete_){
-        delete_.style.display = "none";
-    }if (event.target == createj) {
+    if (event.target == createj) {
         createj.style.display = "none";
-    }if(event.target == updatej){
+        createj.style.left = "0";
+        createj.style.animation = "none";
+    }else if(event.target == updatej){
         updatej.style.display = "none";
-    }if(event.target == deletej){
+    }else if(event.target == deletej){
         deletej.style.display = "none";
-    }if (event.target == creater) {
+    }else if (event.target == creater) {
         creater.style.display = "none";
-    }if(event.target == updater){
+    }else if(event.target == updater){
         updater.style.display = "none";
-    }if(event.target == deleter){
+    }else if(event.target == deleter){
         deleter.style.display = "none";
+    }else if (event.target == notif) {
+        createj.style.display = "";
+        createj.style.left = "0";
+        createj.style.animation = "none";
+        location.reload();
     }
+}
+
+const next = document.getElementById("next");
+const textboxes = document.getElementById("textboxes");
+const add = document.getElementById("add");
+
+var counter = 1;
+localStorage.setItem("num", counter);
+
+next.onclick = function(){
+    createj.style.left = "-100%";
+    createj.style.animation = "animateleft";
+    createj.style.animationDuration = "1s";
+    var jobtitle = document.getElementById("Title").value;
+    var rank = document.getElementById("rank").value;
+    var dep = document.getElementById("department").value;
+    var hstart = document.getElementById("hiringstart").value;
+    var hdead = document.getElementById("hiringdeadline").value;
+    var desc = document.getElementById("desc").value.toString();
+
+    localStorage.setItem("jobtitle", jobtitle);
+    localStorage.setItem("rank", rank);
+    localStorage.setItem("dep", dep);
+    localStorage.setItem("hstart", hstart);
+    localStorage.setItem("hdead", hdead);
+    localStorage.setItem("desc", desc);
+}
+
+add.onclick = function(){
+    counter += 1;
+    const tr = document.createElement('div');
+    const trContent = '<input type="text" id="qual" placeholder="Qualification No. ' + counter + '"><input type="text" id="grade" placeholder="Grade">';
+    tr.innerHTML = trContent;
+    document.getElementById("textboxes").appendChild(tr);
+    localStorage.setItem("num", counter);
+}
+
+function save_job(){
+    var jobtitle = localStorage.getItem("jobtitle");
+    var rank = localStorage.getItem("rank");
+    var dep = localStorage.getItem("dep");
+    var hstart = localStorage.getItem("hstart");
+    var hdead = localStorage.getItem("hdead");
+    var desc = localStorage.getItem("desc");
+    let quali = [];
+    let grades = [];
+
+    [...document.querySelectorAll('input[id^="qual"]')].forEach(function(e){
+      quali.push(e.value);
+    });
+
+    [...document.querySelectorAll('input[id^="grade"]')].forEach(function(e){
+      grades.push(e.value);
+    });
+
+    console.log(jobtitle + " " + rank + " " + dep + " " + hstart + " " + hdead + " " + desc + " " + quali + " " + grades);
+    
+    let array = {
+        "jtitle": jobtitle,
+        "jrank": rank,
+        "jdep": dep,
+        "jhstart": hstart,
+        "jhdead": hdead,
+        "jdesc": desc,
+        "jobquali": quali.toString(),
+        "jobgrade": grades.toString()
+    }
+
+    fetch("../jobcreate.php", {
+        "method": "POST",
+        "headers": {
+            "Content-type": "application/json; charset=utf-8"
+        },
+        "body": JSON.stringify(array)
+    }).then(function(response){
+        return response.text();
+    }).then((data) => {
+        console.log(data);
+        if(data == "true"){
+            document.getElementById("notif").style.display = "block";
+        }
+    }).catch(reportError(e));
 }

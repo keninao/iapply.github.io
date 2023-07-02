@@ -1,0 +1,113 @@
+<input type="text" id="modal" maxlength="11" placeholder="Contact number" step="2" ondrop="return false;" onpaste="return false;" onkeypress="return event.charCode>=48 && event.charCode<=57">
+
+
+**HTML Form with Submit**
+<form class="example-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+**CSS**
+.example-form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.example-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.example-form input, .example-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.example-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.example-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We would like to express our appreciation for your interest in joining our department at <input type="text" size="12">. We have received your application and are impressed with your 
+                        qualifications and experience. We are currently reviewing all applications carefully and will be in touch with you shortly to update you on the status of your application. 
+                        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While we understand that the application process can be stressful, we want to assure you that we are taking every step to ensure that all applications are evaluated thoroughly 
+                        and fairly. We value your interest in our organization and thank you for taking the time to apply.<br><br>
+
+
+chatgpt = key = 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
+
+
+        
+        
+        <div id="createdepartment" class="modal">
+            <div class="modal-content">
+                <div class="content">
+                    <h2 style="text-align: center;">Create Department<br><p style="font-size: 14px;font-weight: 100;">Fill up the form.</p></h2><br><br>
+                    <input type="text" id="modal" name="department" placeholder="Department">
+                    <input type="text" id="modal" name="departmentName" placeholder="Department Name">
+                    <br><br>
+                    <div class="button">
+                        <button type="submit" class="next" id="create">Create</button>
+                        <button type="submit" class="cancel" id="back">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="updatedepartment" class="modal">
+            <div class="modal-content">
+                <div class="content">
+                    <h2 style="text-align: center;">Update Department<br><p style="font-size: 14px;font-weight: 100;">Update the form.</p></h2><br><br>
+                    <input type="text" id="modal" name="department" placeholder="Department">
+                    <input type="text" id="modal" name="departmentName" placeholder="Department Name">
+                    <br><br>
+                    <div class="button">
+                        <button type="submit" class="next" id="update">Update</button>
+                        <button type="submit" class="cancel" id="back">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="deletedepartment" class="modal">
+            <div class="modal-content">
+                <div class="content">
+                    <h2 style="text-align: center;">Delete Department<br><p style="font-size: 14px;font-weight: 100;">Are you sure you want to delete this/these department?</p></h2>
+                    <br><br>
+                    <div class="button">
+                        <button type="submit" class="cancel" id="delete">Delete</button>
+                        <button type="submit" class="next" id="back">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+}
+

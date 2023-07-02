@@ -20,12 +20,6 @@ btn.onclick = function() {
     modal.style.display = "block";
     randomizer.innerHTML = "#2023112" + random_result(4);
     closePopup();
-
-    if(checkbox.checked() = true){
-        check.ariaDisabled() = false;
-    }else{
-        check.ariaDisabled() = true;
-    }
 }
 
 span.onclick = function() {

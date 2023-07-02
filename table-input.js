@@ -1,24 +1,17 @@
 fetch("../conn.php")
     .then((response) => {
-        if(!response.ok){
+        if (!response.ok) {
             throw new Error("Something went wrong!");
         }
 
         return response.json();
     })
     .then((data) => {
-        var newStr = data.replaceAll("array", "\n");
-        const array = newStr.split("\n");
-
-        array.forEach(arr => {
-            const new_arr = arr.split(" ");
+        data.forEach(arr => {
             const tr = document.createElement('tr');
-            const trContent = '<td>' + new_arr[0].replaceAll("_", " ") + '</td><td>' + new_arr[1].replaceAll("_", " ") + '</td><td>' + new_arr[2].replaceAll("_", " ") + '</td><td>' + new_arr[3].replaceAll("_", " ") + '</td><td>' + new_arr[4].replaceAll("_", " ") + '</td>'
+            tr.setAttribute('id', arr["position_title"]);
+            const trContent = '<td>' + arr["position_title"] + '</td><td>' + arr["rank"] + '</td><td>' + arr["department"] + '</td><td>' + arr["hiring_start"] + '</td><td>' + arr["deadline"] + '</td><td><a href="#" onclick="getName('+arr["job_id"] + ')">Apply</a></td>';
             tr.innerHTML = trContent;
-            document.querySelector('table tbody').appendChild(tr);
+            document.getElementById("job").appendChild(tr);
         })
-        alert("Hello " + array[1].replaceAll("_", " "));
     })
-    .catch((error) => {
-        alert(error);
-    });

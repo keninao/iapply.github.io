@@ -1,0 +1,33 @@
+<!--<h1>Dashboard</h1>
+                <div class="date">
+                    <span id="time"></span>
+                </div>
+
+                <div class="top-applicants">
+                    <h2>Position Applied</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title/Position</th>
+                                <th>Rank</th>
+                                <th>Department</th>
+                                <th>Hiring Start</th>
+                                <th>Hiring Deadline</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>College of Business Administration - Teacher</td>
+                                <td>Teacher</td>
+                                <td>CBA</td>
+                                <td>2023-07-15</td>
+                                <td>2023-08-15</td>
+                                <td class="warning">Pending</td>
+                                <td><a href="#" class="info">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </div>-->
